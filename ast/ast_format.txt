@@ -1,0 +1,338 @@
+Attr *A
+id
+kind
+
+range
+inherited
+implicit
+-------------------------
+
+Stmt *S
+id
+kind
+range
+type
+valueCategory
+    lvalue
+    xvalue
+    prvalue
+--------------------------
+
+Type *T
+id
+kind
+type
+
+//attributeOnlyIfTrue
+containsErrors
+isDependent
+isInstantiationDependent
+isVariablyModified
+containsUnexpandendPack
+isImported
+--------------------------
+
+QualType T
+id
+kind
+  qualType
+type
+qualifiers
+--------------------------
+
+Decl *D
+id
+kind
+loc
+range
+
+isImplicit
+isInvalid
+isUsed
+isReferenced
+isHidden
+parentDeclContextId
+---------------------------
+
+Comment *C
+id
+kind
+loc
+range
+---------------------------
+
+TemplateArgument &TA
+kind
+    templateArgument
+range
+fromDecl
+---------------------------
+
+CXXCtorInitializer *Init
+kind
+  cxxCtorInitializer
+anyInit
+baseInit
+delegatingInit
+----------------------------
+
+BlockDecl::Capture &C
+kind
+    capture
+
+byref
+nested
+var
+-----------------------------
+
+GenericSelectionExpr::ConstAssociation &A
+associationKind
+    default
+selected
+------------------------------
+
+concepts::Requirement *R
+kind
+    typeRequirement / simpleRequirement / compundRequirement / nestedRequirement
+
+noexcept
+isDependent
+satisfied
+containsUnexpandendPack
+-------------------------------
+
+APValue &Value
+value
+-------------------------------
+
+TypedefType *TT
+decl
+-------------------------------
+
+FunctionType *T
+noreturn
+producesResult
+regParm
+cc
+--------------------------------
+
+FunctionProtoType *T
+tailingReturn
+const
+volatile
+restrict
+variadic
+refQualifier 
+    & / &&
+exceptionSepc-throw / exceptionTypes / exceptionSepc-throw throwsAny / exceptionSepc-noexcept / exceptionSepc-noexcept conditionEvaluatesTo / exceptionSepc-nothrow
+-------------------------------
+
+ReferenceType *RT
+spelledAsLValue
+-------------------------------
+
+ArrayType *AT
+sizeModifier * / sizeModifier static
+indexTypeQualifiers
+-------------------------------
+
+ConstantArrayType *CAT
+size
+---------------------------------
+
+DependentSizedExtVectorType *VT
+attrLoc
+-------------------------------------
+
+VectorType *VT
+numElements
+vertorKind-altivec / vectorKind-altivec pixel / vectorKind-altivec bool / vectorKind-neon / vectorKind-neon poly / vectorKind-fixed-length sve data vector / vectorKind-fixed-length sve predicate vector
+------------------------------------
+
+UnresolvedUsingType *UUT
+decl
+------------------------------------
+
+UnaryTransformType *UTT
+transformKind-underlying_type
+-------------------------------------
+
+TagType *TT
+decl
+-------------------------------------
+
+TemplateTypeParmType *TTPT
+depth
+index
+isPack
+decl
+-------------------------------------
+
+AutoType *AT
+undeduced
+typeKeyword : auto / decltype(auto) / __auto_type
+---------------------------------------
+
+TemplateSpecializationType *TST
+isAlias
+template
+----------------------------------------
+
+InjectedClassNameType *ICNT
+decl
+---------------------------------------
+
+ObjCInterfaceType *OIT
+decl
+----------------------------------------
+
+PackExpansionType *PET
+numExpansions
+---------------------------------------
+
+ElaboratedType *ET
+qualifiers
+ownedTagDecl
+-----------------------------------------
+
+MacroQualifiedType *MQT
+macroName
+------------------------------------------
+
+MemberPointerType *MPT
+isData
+isFunction
+-------------------------------------------
+
+NamedDecl *ND
+name
+mangledName
+---------------------------------------------
+
+TypedefDecl *TD
+type
+-----------------------------------------------
+
+TypeAliasDecl *TAD
+type
+-----------------------------------------
+
+NamespaceDecl *ND
+isInline
+originalNamespace
+----------------------------------------
+
+UsingDirectiveDecl *UDD
+nominatedNamespace
+-----------------------------------------
+
+NamespaceAliasDecl *NAD
+aliasedNamespace
+-----------------------------------------
+
+UsingDecl *UD
+name
+------------------------------------------
+
+UsingEnumDecl *UED
+target
+--------------------------------------------
+
+UsingShadowDecl *USD
+target
+--------------------------------------------
+
+VarDecl *VD
+type
+storageClass
+tls: dynamic / static
+nrvo
+inline
+constexpr
+modulePrivate
+init: c / call / list
+isParameterPack
+---------------------------------------------
+
+FieldDecl *FD
+type
+mutable
+modulePrivate
+isBitfield
+hasInClassInitializer
+---------------------------------------------
+
+FunctionDecl *FD
+type
+storageClass
+inline
+virtual
+pure
+explicitlyDeleted
+constexpr
+variadic
+explicitlyDefaulted: deleted / default
+-----------------------------------------------
+
+EnumDecl *ED
+fixedUnderlyingType
+scopedEnumTag: class / struct
+------------------------------------------------
+
+EnumConstantDecl *ECD
+type
+---------------------------------------------
+
+RecordDecl *RD
+tagUsed
+completeDefinition
+----------------------------------------------
+
+CXXRecordDecl *RD
+definitionData
+bases
+------------------------------------------------
+
+TemplateTypeParmDecl *D
+tagUsed : typename / class
+depth
+index
+isParameterPack
+defaultArg : inherited from / previous
+------------------------------------------------
+
+NonTypeTemplateParmDecl *D
+type
+depth
+index
+isParameterPack
+defaultArg: inherited from / previous
+------------------------------------------------
+
+TemplateTemplateParmDecl *D
+depth
+index
+isParameterPack
+defaultArg: inherited from / previous
+------------------------------------------------
+
+LinkageSpecDecl *LSD
+language: C / C++
+hasBraces
+------------------------------------------------
+
+AccessSpecDecl *ASD
+access
+-------------------------------------------------
+
+FriendDecl *FD
+type
+------------------------------------------------
+
+ObjCIvarDecl *D
+type
+synthesized
+access: none / private / protected / public / package
+-------------------------------------------------
+
+ObjCMethodDecl *D
