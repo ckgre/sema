@@ -6,7 +6,7 @@ import argparse
 import json
 from collections import OrderedDict
 import sys
-sys.path.append('..')
+sys.path.append('../../utils')
 from utils.utils import create_new_dir, count_errors
 from utils.mylogger import *
 

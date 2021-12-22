@@ -3,7 +3,7 @@ import json
 import logging
 import argparse
 import sys
-sys.path.append('..')
+sys.path.append('../../utils')
 from utils.utils import create_new_dir, count_errors
 from utils.mylogger import *
 
